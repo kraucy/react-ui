@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+.card {
+	color: $lg;
+	display: flex;
+	flex-direction: column;
+
+	&-container {
+		@extend .card;
+		background-color: $dark;
+		border: 1px solid $dg;
+		border-radius: $brad;
+		box-shadow: $shadow;
+		cursor: pointer;
+		flex: 1 0 21%;
+		margin: 15px;
+		transition: .3s ease-in-out;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	&-header {
+		@extend .card;
+		// border-bottom: 1px solid $light;
+		flex-direction: row;
+		padding: 15px;
+
+		h2 {
+			font-weight: 400;
+			margin: 0;
+		}
+	}
+
+	&-body {
+		@extend .card;
+		background-color: $light;
+		flex-direction: column;
+		padding: 0 15px;
+
+		p {
+			color: $dg;
+			font-size: $medium;
+			font-weight: 400;
+		}
+	}
+
+	&-footer {
+		@extend .card;
+		align-items: center;
+		// border-top: 1px solid $light;
+		flex-direction: row;
+		justify-content: flex-end;
+		padding: 15px;
+
+		button {
+			border-radius: $brad;
+			height: 30px;
+		}
+	}
+}

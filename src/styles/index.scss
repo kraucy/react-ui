@@ -1,0 +1,53 @@
+@import './variables.scss';
+@import './fonts.scss';
+@import './card.scss';
+@import './footer.scss';
+@import './header.scss';
+@import './App.scss';
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	max-width: 500px;
+}
+
+.gray {
+	color: #828282;
+}
+
+.orange {
+	background-color: #ff6600;
+}
+
+.background-gray {
+	background-color: rgb(246, 246, 239);
+}
+
+.f11 {
+	font-size: 11px;
+}
+
+.w85 {
+	width: 85%;
+}
+
+button {
+	align-items: center;
+	border: none;
+	color: $dark;
+	cursor: pointer;
+	display: flex;
+	font-size: 18px;
+	font-weight: 400;
+	outline: none;
+	text-transform: uppercase;
+	transition: .2s ease-in-out;
+
+	&:hover {
+		background-color: (darken($color: $lg, $amount: 5%));
+		color: white;
+	}
+}

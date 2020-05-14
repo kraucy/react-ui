@@ -1,0 +1,58 @@
+@import './variables.scss';
+
+footer {
+	align-items: center;
+	background-color: $dark;
+	box-shadow: $shadow;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: calc(100vh - 95vh);
+	min-height: 50px;
+	padding: 0 30px;
+	position: sticky;
+	top: 0;
+
+	.logo {
+		cursor: pointer;
+		font-size: 24px;
+		text-transform: uppercase;
+		transition: .2s ease-in-out;
+
+		&:hover {
+			color: $grey;
+		}
+	}
+
+	.links {
+		display: flex;
+		justify-content: space-evenly;
+
+		li {
+			cursor: pointer;
+			list-style-type: none;
+			text-transform: uppercase;
+			transition: .2s ease-in-out;
+
+			&:hover {
+				color: $grey;
+			}
+
+			&:not(:first-child) {
+				margin-left: 15px;
+			}
+		}
+
+		svg {
+			cursor: pointer;
+			font-size: 30px;
+		}
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	footer {
+		padding: 0 15px;
+	}
+}
