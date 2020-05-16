@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import useWindowDimensions from '../../hooks/width'
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-const links = ['link 1', 'link 2', 'link 3'];
+const links = ['/', 'about', 'contact'];
 
 function Header() {
 
@@ -16,7 +17,11 @@ function Header() {
 			return (
 				links.map(
 					(link, index) => 
-						<li key={index}>{link}</li>
+						<li key={index}>
+							<Link to={`${link}`}>		
+								{link}
+							</Link>
+						</li>
 					)
 				)
 			}
@@ -35,7 +40,9 @@ function Header() {
 				Keith Raucy
 			</div>
 			<div className="links">
-				<ShowLinks />
+				<Router>
+					<ShowLinks />
+				</Router>
 			</div>
 		</header>
 	);

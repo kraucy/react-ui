@@ -1,35 +1,39 @@
 import React from 'react';
-import Card from './cards/card';
 import Footer from './footer/footer';
 import Header from './header/header';
-import cards from '../data/cards';
+import About from '../pages/about';
+import Contact from '../pages/contact';
+import Home from '../pages/home';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	// Link,
+	// useRouteMatch
+  } from "react-router-dom";
 
 
 function App() {
-
-	const listItems = cards.map((card, index) => 
-		<Card 
-			button={card.button}
-			copy={`${card.copy} ${index + 1}`}
-			key={index}
-			title={`${card.title} ${index + 1}`}
-		/>
-	);
-
   return (
-    <div className="App">
-		<Header
-			className="App-header"
-		/>
-		<div className="body">
-			<div className="row">
-				{listItems}
+	<Router>
+		<div className="App">
+			<Header className="App-header" />
+			<div className="body">
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/contact">
+						<Contact />
+					</Route>
+				</Switch>
 			</div>
+			<Footer className="App-footer" />
 		</div>
-		<Footer
-			className="App-footer"
-		/>
-    </div>
+	</Router>
   );
 }
 

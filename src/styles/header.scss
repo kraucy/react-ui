@@ -1,58 +1,63 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 header {
-	align-items: center;
-	background-color: $dark;
-	box-shadow: $shadow;
-	color: white;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	height: calc(100vh - 95vh);
-	min-height: 50px;
-	padding: 0 30px;
-	position: sticky;
-	top: 0;
+    align-items: center;
+    background-color: $dark;
+    box-shadow: $shadow;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100vh - 95vh);
+    min-height: 50px;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
 
-	.logo {
-		cursor: pointer;
-		font-size: 24px;
-		text-transform: uppercase;
-		transition: .2s ease-in-out;
+    .logo {
+        cursor: pointer;
+        font-size: 24px;
+        text-transform: uppercase;
+        transition: .2s ease-in-out;
 
-		&:hover {
-			color: $grey;
-		}
-	}
+        &:hover {
+            color: $grey;
+        }
+    }
 
-	.links {
-		display: flex;
-		justify-content: space-evenly;
+    .links {
+        display: flex;
+        justify-content: space-evenly;
 
-		li {
-			cursor: pointer;
-			list-style-type: none;
-			text-transform: uppercase;
-			transition: .2s ease-in-out;
+        li {
+            list-style-type: none;
 
-			&:hover {
-				color: $grey;
-			}
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
 
-			&:not(:first-child) {
-				margin-left: 15px;
-			}
-		}
+            a {
+                color: $light;
+                cursor: pointer;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: .2s ease-in-out;
 
-		svg {
-			cursor: pointer;
-			font-size: 30px;
-		}
-	}
+                &:hover {
+                    color: $grey;
+                }
+            }
+        }
+
+        svg {
+            cursor: pointer;
+            font-size: 30px;
+        }
+    }
 }
 
 @media only screen and (max-width: 720px) {
-	header {
-		padding: 0 15px;
-	}
+    header {
+        padding: 0 15px;
+    }
 }
