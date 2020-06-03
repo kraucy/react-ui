@@ -1,24 +1,39 @@
 import React from 'react';
+import Button from '../buttons/button';
 
-function Card(props) {
+function Card(
+	{
+		button, copy, title
+	}
+) {
 
   return (
     <div className="card-container flex">
 		<div className="card">
 			<div className="card-header">
 				<h2>
-					{props.title}
+					{title}
 				</h2>
 			</div>
 			<div className="card-body">
 				<p>
-					{props.copy}
+					{copy}
 				</p>
 			</div>
 			<div className="card-footer">
-				<button>
-					{props.button}
-				</button>
+				<Button 
+					btnClick={
+						() => {
+							alert('Button clicked!')
+						}
+					}
+					className={
+						button.class
+					}
+					title={
+						button.title
+					}
+				/>
 			</div>
 		</div>
     </div>

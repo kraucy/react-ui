@@ -1,36 +1,57 @@
 const cards = [
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	},
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	},
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	},
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	},
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	},
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	},
 	{
-		button: 'Click',
+		button: {
+			class: 'button',
+			title: 'Click'
+		},
 		copy: 'This copy is for card number',
 		title: 'Card number'
 	}

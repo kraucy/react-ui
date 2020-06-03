@@ -1,6 +1,7 @@
 import React from "react";
 import Card from '../components/cards/card';
 import cards from '../data/cards';
+// import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
 
 function Home() {
@@ -14,8 +15,10 @@ function Home() {
 	);
 	return (
 		<div className="row">
-		{listItems}
-	</div>
+			{
+				listItems
+			}
+		</div>
 	);
   }
 
